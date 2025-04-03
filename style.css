@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Fallback for browsers that do not support the image */
+    position: relative; /* Required for the positioning of the overlay */
+}
+
+/* Background Image Styles */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://assets.onecompiler.app/43dpha3hc/43dpgru7p/images%20(8).jpeg') no-repeat center center; /* Use the provided URL */
+    background-size: cover; /* Cover the whole body */
+    opacity: 0.5; /* Set opacity to 50% */
+    z-index: -1; /* Place it behind other content */
+}
+
+header {
+    background: #333; /* Set header color to dark gray/whitish-black */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px; /* Start off screen */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.side-menu.open {
+    left: 0; /* Position it on screen when open */
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background: white; /* Circle background color */
+    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    position: fixed; /* Fix position on screen */
+    left: 10px; /* Position from left */
+    top: 50%; /* Position in the middle vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Add slight shadow for better visibility */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin */
+    position: relative; /* Ensure main content is properly positioned */
+    z-index: 1; /* Bring the main content to front */
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: rgba(244, 244, 244, 0.85); /* Background color with slight transparency */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: darkgray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+
+    main {
+        margin-left: 0; /* No margin for mobile view */
+    }
+}
