@@ -69,6 +69,33 @@
 </body>
 </html>
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Fallback for browsers that do not support the image */
+    position: relative; /* Required for the positioning of the overlay */
+}
+
+/* Background Image Styles */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://assets.onecompiler.app/43dpha3hc/43dpgru7p/images%20(8).jpeg') no-repeat center center; /* Use the provided URL */
+    background-size: cover; /* Cover the whole body */
+    opacity: 0.5; /* Set opacity to 50% */
+    z-index: -1; /* Place it behind other content */
+}
+
 document.getElementById('menu-toggle').addEventListener('click', function() {
     const sideMenu = document.getElementById('side-menu');
     const isMenuOpen = sideMenu.classList.contains('open');
