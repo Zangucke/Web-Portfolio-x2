@@ -61,6 +61,241 @@ header {
     position: fixed; /* Fix position on screen */
     left: 10px; /* Position from left */
     top: 50%; /* Position in the middle vertically */
+    transform: translateY(-50/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light Gray Background */
+    position: relative;
+}
+
+/* Background Image Styles */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://assets.onecompiler.app/43dpha3hc/43dpgru7p/images%20(8).jpeg') no-repeat center center; /* Background Image */
+    background-size: cover; /* Cover the whole body */
+    opacity: 0.4; /* Set opacity for the background */
+    z-index: -1; /* Place behind content */
+}
+
+header {
+    background: rgba(51, 51, 51, 0.8); /* Dark Header with slight Transparency */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em; /* Larger Header Font Size */
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px; /* Start off-screen */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: rgba(51, 51, 51, 0.9); /* Dark Menu with Transparency */
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.side-menu.open {
+    left: 0; /* Display the menu */
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    background: white; /* Circle background color */
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    position: fixed; /* Fix position on the screen */
+    left: 10px; /* Position from left */
+    top: 50%; /* Position in the middle vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the arrow horizontally */
+    align-items: center; /* Center the arrow vertically */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Slight shadow for better visibility */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.side-menu ul li a:hover {
+    color: #45a049; /* Green hover effect for links */
+}
+
+main {
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin */
+    position: relative; /* Ensure main content is properly positioned */
+    z-index: 1; /* Bring the main content to front */
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: rgba(244, 244, 244, 0.9); /* Semi-Transparent Background for Projects */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    transition: transform 0.3s ease; /* Smooth transform for hover effect */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold; /* Bold labels */
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Border around the input */
+    border-radius: 4px; /* Rounded corners */
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #45a049; /* Green Button Background */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+form button:hover {
+    background: #3e8e41; /* Darker green on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(51, 51, 51, 0.8); /* Dark Footer with Transparency */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 100%; /* Entire width for mobile view */
+    }
+
+    main {
+        margin-left: 0; /* No margin for mobile view */
+    }
+        }    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Fallback for browsers that do not support the image */
+    position: relative; /* Required for the positioning of the overlay */
+}
+
+/* Background Image Styles */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://assets.onecompiler.app/43dpha3hc/43dpgru7p/images%20(8).jpeg') no-repeat center center; /* Use the provided URL */
+    background-size: cover; /* Cover the whole body */
+    opacity: 0.5; /* Set opacity to 50% */
+    z-index: -1; /* Place it behind other content */
+}
+
+header {
+    background: #333; /* Set header color to dark gray/whitish-black */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px; /* Start off screen */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.side-menu.open {
+    left: 0; /* Position it on screen when open */
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background: white; /* Circle background color */
+    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    position: fixed; /* Fix position on screen */
+    left: 10px; /* Position from left */
+    top: 50%; /* Position in the middle vertically */
     transform: translateY(-50%); /* Center it vertically */
     box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Add slight shadow for better visibility */
 }
@@ -136,6 +371,14 @@ footer {
 
 @media (max-width: 768px) {
     .project {
+        width: 100%;
+    }
+
+    main {
+        margin-left: 0; /* No margin for mobile view */
+    }
+}
+ect {
         width: 100%;
     }
 
