@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inosloban-Marawoy Integrated National High School Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inosloban-Marawoy Integrated National High School Student Portfolio</h1>
+    </header>
 
+    <nav id="side-menu" class="side-menu">
+        <div id="menu-toggle" class="arrow">▶</div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>[Brief description about yourself, your skills, and your interests.]</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project">
+                    <img src="images/profile.jpg" alt="Project Image">
+                    <h3>Project Title 1</h3>
+                    <p>[Description of Project 1]</p>
+                </div>
+                <div class="project">
+                    <img src="images/profile.jpg" alt="Project Image">
+                    <h3>Project Title 2</h3>
+                    <p>[Description of Project 2]</p>
+                </div>
+                <div class="project">
+                    <img src="images/profile.jpg" alt="Project Image">
+                    <h3>Project Title 3</h3>
+                    <p>[Description of Project 3]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [Year] [Your Name]. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
